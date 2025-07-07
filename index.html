@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de inicio de El Rincón del Geek. Encuentra computadoras, componentes y más.">
+  <meta name="keywords" content="tecnología, computadoras, gamers, laptops, desktops, accesorios">
+  <meta name="author" content="Yair Herrera Nunez">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>El Rincón del Geek | Inicio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="bg-dark text-white" role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark container">
+      <a class="navbar-brand" href="index.html" aria-label="Ir a la página de inicio">El Rincón del Geek</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li class="nav-item"><a href="productos.html" class="nav-link">Productos</a></li>
+          <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5" role="main">
+    <section class="text-center mb-5" aria-labelledby="bienvenida-title" role="region">
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container py-5">
+          <img src="img/rincon.jpg" class="img-fluid mb-4 rounded shadow" alt="Logo de El Rincón del Geek en fondo blanco" style="max-height: 300px;">
+          <h1 id="bienvenida-title" class="display-4">Bienvenido a El Rincón del Geek</h1>
+          <p class="lead mx-auto" style="max-width: 700px;">Tu espacio para encontrar lo último en tecnología, armado de PCs, periféricos y más.</p>
+          <a href="productos.html" class="btn btn-primary btn-lg mt-3" aria-label="Explorar nuestros productos destacados">Ver productos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center mb-5" role="region" aria-labelledby="componentes-title">
+      <h2 id="componentes-title" class="mb-4">Componentes de una PC</h2>
+      <div>
+        <img src="img/mapa_componentes.png" alt="Diagrama de componentes de PC" usemap="#componentes-map" class="img-fluid rounded shadow">
+        <map name="componentes-map">
+          <area shape="rect" coords="50,50,200,150" href="https://es.wikipedia.org/wiki/Unidad_central_de_procesamiento" alt="CPU" title="CPU - Unidad Central de Procesamiento" target="_blank">
+          <area shape="circle" coords="300,100,70" href="https://es.wikipedia.org/wiki/Unidad_de_procesamiento_gr%C3%A1fico" alt="GPU" title="GPU - Tarjeta Gráfica" target="_blank">
+          <area shape="poly" coords="450,70,550,70,520,130,480,130" href="https://es.wikipedia.org/wiki/Memoria_de_acceso_aleatorio" alt="RAM" title="RAM - Memoria de Acceso Aleatorio" target="_blank">
+        </map>
+        <p class="text-muted small mt-2">*Haz clic en las zonas del diagrama para más información técnica.*</p>
+      </div>
+    </section>
+
+    <section class="text-center mb-5" role="region" aria-labelledby="galeria-title">
+      <h2 id="galeria-title" class="mb-4">Galería de productos</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/computadora_escritorio.jpg" class="card-img-top" alt="Computadora de escritorio moderna">
+            <div class="card-body">
+              <h5 class="card-title">PC Escritorio</h5>
+              <p class="card-text">Equipos potentes para juegos y productividad extrema.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/laptop1.jpg" class="card-img-top" alt="Laptop abierta sobre escritorio">
+            <div class="card-body">
+              <h5 class="card-title">Laptops</h5>
+              <p class="card-text">Portátiles versátiles y potentes para trabajar o jugar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/componentes1.png" class="card-img-top" alt="Componentes de computadora variados">
+            <div class="card-body">
+              <h5 class="card-title">Componentes</h5>
+              <p class="card-text">Tarjetas gráficas, procesadores, RAM y más.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center mb-5" role="region" aria-labelledby="svg-title">
+      <h2 id="svg-title" class="mb-4">Icono representativo</h2>
+      <svg viewBox="0 0 24 24" class="icono-monitor" width="100" height="100" fill="currentColor" aria-label="Ícono de monitor flotante">
+        <path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v12H2V6h20zM10 10h4v4h-4v-4z" />
+      </svg>
+      <p class="mt-2">Representando la esencia de la tecnología moderna.</p>
+    </section>
+
+    <section class="text-center mt-4" role="region">
+      <a href="contacto.html" class="btn btn-outline-secondary btn-lg" aria-label="Ir a la página de contacto">Contáctanos</a>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5" role="contentinfo">
+    <p class="mb-0">&copy; 2025 El Rincón del Geek. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

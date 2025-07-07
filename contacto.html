@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos para cualquier consulta o soporte técnico.">
+    <meta name="keywords" content="contacto, soporte, ayuda, consulta, computadoras, preguntas">
+    <meta name="author" content="Yair Herrera Nunez">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>El Rincón del Geek | Contacto</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Evita íconos de validación visual para el campo de archivo */
+        .was-validated input[type="file"]:valid,
+        .was-validated input[type="file"]:invalid {
+            border-color: initial;
+            background-image: none;
+            padding-right: 0.75rem;
+            background-position: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white" role="banner">
+        <nav class="navbar navbar-expand-md navbar-dark container">
+            <a class="navbar-brand" href="index.html" aria-label="Ir a la página de inicio">El Rincón del Geek</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container py-4">
+        <section class="contact-form-section" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto" class="text-center mb-4">Contáctanos</h2>
+            <p class="text-center mb-5">Envíanos tus preguntas, sugerencias o solicita soporte técnico. Estamos aquí para ayudarte.</p>
+
+            <form id="form-contacto" action="#" method="POST" class="needs-validation" enctype="multipart/form-data" aria-label="Formulario de contacto" novalidate>
+                <p class="text-muted text-center">Los campos marcados con * son obligatorios.</p>
+
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title">Información Personal *</h5>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre completo *</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required aria-required="true" placeholder="Tu nombre" autocomplete="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico *</label>
+                        <input type="email" class="form-control" id="email" name="email" required aria-required="true" placeholder="tu.correo@ejemplo.com" autocomplete="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required aria-required="true" placeholder="Ej: +51 987654321" pattern="[+]?[0-9]{9,15}" title="Formato: +CódigoPaís Número (ej. +51 987654321)">
+                    </div>
+                </div>
+
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title">Detalles de tu Consulta *</h5>
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label">Asunto *</label>
+                        <select id="asunto" name="asunto" class="form-select" required aria-required="true">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta_general">Consulta General</option>
+                            <option value="soporte_tecnico">Soporte Técnico</option>
+                            <option value="ventas">Consulta de Ventas</option>
+                            <option value="sugerencias">Sugerencias o Feedback</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label d-block">Prioridad *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="prioridad" id="prioridad_baja" value="baja" checked>
+                            <label class="form-check-label" for="prioridad_baja">Baja</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="prioridad" id="prioridad_media" value="media">
+                            <label class="form-check-label" for="prioridad_media">Media</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="prioridad" id="prioridad_alta" value="alta">
+                            <label class="form-check-label" for="prioridad_alta">Alta</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje *</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required aria-required="true" placeholder="Describe tu consulta aquí..."></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="adjunto" class="form-label">Adjuntar archivo (opcional)</label>
+                        <input type="file" class="form-control" id="adjunto" name="adjunto" accept=".jpg, .jpeg, .png, .pdf">
+                        <small class="form-text text-muted">Formatos permitidos: JPG, PNG, PDF (Máx. 5MB)</small>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="acepto_terminos" name="acepto_terminos" required aria-required="true">
+                        <label class="form-check-label" for="acepto_terminos">
+                            Acepto los <a href="#" aria-label="Leer Términos y Condiciones">Términos y Condiciones</a> *
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                <p id="mensaje-exito" class="mt-3 text-success fw-bold text-center" style="display:none;">Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto pronto.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2025 El Rincón del Geek. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("form-contacto").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const form = this;
+
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            const archivoInput = document.getElementById("adjunto");
+            const archivo = archivoInput.files[0];
+            if (archivo && archivo.size > 5 * 1024 * 1024) {
+                alert("El archivo excede el tamaño máximo permitido de 5MB.");
+                return;
+            }
+
+            document.getElementById("mensaje-exito").style.display = "block";
+            form.reset();
+            form.classList.remove('was-validated');
+        });
+    </script>
+</body>
+</html>
+
